@@ -42,19 +42,21 @@ void sortStruct(Restaurant list[], int structSize)
 
 void editStruct(Restaurant list[], int structSize, int restaurantToEdit, int valueToEdit, string newValue)
 {
+    restaurantToEdit -= 1;
+
     switch(valueToEdit)
     {
         case (1):
-            list[restaurantToEdit - 1].name = newValue;
+            list[restaurantToEdit].name = newValue;
             break;
         case (2):
-            list[restaurantToEdit - 1].chefSecondName = newValue;
+            list[restaurantToEdit].chefSecondName = newValue;
             break;
         case (3):
-            list[restaurantToEdit - 1].mainMenu = newValue;
+            list[restaurantToEdit].mainMenu = newValue;
             break;
         case (4):
-            list[restaurantToEdit - 1].numberOfTables = stoi(newValue);
+            list[restaurantToEdit].numberOfTables = stoi(newValue);
             break;
         default:
             break;
