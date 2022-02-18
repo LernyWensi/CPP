@@ -22,13 +22,16 @@ void printStrcut(Conferee list[], int structSize)
 
 void sortStruct(Conferee list[], int structSize)
 {
-    for (int i = 0; i < structSize - 1; i++)
+    for (int i = 0; i < structSize; i++)
     {
-        if (list[i].secondName[0] > list[i + 1].secondName[0])
+        for (int j = i; j < structSize; j++)
         {
-            Conferee tmp = list[i];
-            list[i] = list[i + 1];
-            list[i + 1] = tmp;
+            if (list[i].secondName[0] > list[j].secondName[0])
+            {
+                Conferee tmp = list[i];
+                list[i] = list[j];
+                list[j] = tmp;
+            }
         }
     }
 }
