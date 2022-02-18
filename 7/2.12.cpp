@@ -15,7 +15,7 @@ void printStrcut(Restaurant list[], int structSize)
 {
     for (int i = 0; i < structSize; i++)
     {
-        cout << "Restaurant №" << i + 1 << endl;
+        cout << "Restaurant #" << i + 1 << endl;
         cout << "1) Name: " << list[i].name << endl;
         cout << "2) Chef second name: " << list[i].chefSecondName << endl;
         cout << "3) Main menu: " << list[i].mainMenu << endl;
