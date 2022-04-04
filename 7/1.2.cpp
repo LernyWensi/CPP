@@ -12,15 +12,21 @@ struct Sportsman
 int main()
 {
     string targetSport;
-
-    Sportsman sportsmans[] = {
-        {"secondName", "tennis", "sportCommunity"},
-        {"secondName", "tennis", "sportCommunity"},
-        {"secondName", "tennis", "sportCommunity"}
-    };
-    int sportsmansSize = sizeof(sportsmans) / sizeof(sportsmans[0]);
     
-    cout << "Enter target sport: ";
+    int sportsmansSize;
+    
+    cout << "Enter number of sportsmans: "; cin >> sportsmansSize;
+
+    Sportsman *sportsmans = new Sportsman[sportsmansSize];
+
+    for (int i = 0; i < sportsmansSize; ++i)
+    {
+        cout << "\nSecond name: "; cin >> sportsmans[i].secondName;
+        cout << "Sport: "; cin >> sportsmans[i].sport;
+        cout << "Sport community: "; cin >> sportsmans[i].sportCommunity;
+    }
+    
+    cout << "\nEnter target sport: ";
     cin >> targetSport;
     cout << endl;
     

@@ -20,7 +20,7 @@ int main()
   }
   else
   {
-    y < z ? y = (z + x) / 2 : z = (y + x) / 2;
+    y < x ? y = (z + x) / 2 : x = (y + z) / 2;
   }
 
   printf("\nAfter condition:\nx = %.2f | y = %.2f | z = %.2f", x, y, z);
